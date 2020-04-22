@@ -1,4 +1,4 @@
-module github.com/marinira/http-rest-api
+module github.com/marinira/viber-e-shop
 
 go 1.13
 
