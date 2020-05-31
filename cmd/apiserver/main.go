@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"github.com/BurntSushi/toml"
-	"github.com/marinira/http-rest-api/internal/app/apiserver"
+	"github.com/marinira/viber-e-shop/internal/app/apiserver"
 	"log"
 )
 
@@ -26,7 +26,8 @@ func main() {
 		log.Fatal(err)
 	}
 	s := apiserver.New(config)
-	if err := s.Start(); err != nil {
+	err = s.Start()
+	if err != nil {
 		log.Fatal(err)
 	}
 }

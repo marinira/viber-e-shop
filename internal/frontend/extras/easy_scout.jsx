@@ -39,6 +39,7 @@ export default class EasyScout extends Component {
 	}
 
 	submit = async e => {
+		/*
 		this.setState({
 			error_farmlist: (this.state.selected_farmlist == ''),
 			error_village: (this.state.village_id == 0),
@@ -46,16 +47,12 @@ export default class EasyScout extends Component {
 		});
 
 		if (this.state.error_village || this.state.error_farmlist || this.state.error_amount) return;
-
+*/
 		const payload = {
-			list_name: this.state.selected_farmlist,
-			village_id: this.state.village_id,
-			amount: this.state.amount,
-			mission: this.state.mission
 		};
 
-		const response = await axios.post('/api/easyscout', payload);
-		if (response.data == 'success') route('/');
+		const response = await axios.post('/api/startbot/', payload);
+		if (response.data == '200') route('/');
 	}
 
 	cancel = async e => {

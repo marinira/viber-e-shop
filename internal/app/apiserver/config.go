@@ -1,7 +1,7 @@
 package apiserver
 
 import (
-	"github.com/marinira/http-rest-api/internal/app/db"
+	"github.com/marinira/viber-e-shop/internal/app/db"
 )
 
 //конфигурация API сервера
@@ -14,7 +14,7 @@ type Config struct {
 // создаем новую конфигурацию
 func NewConfig() *Config {
 	return &Config{
-		BindAddr: ":8080",
+		BindAddr: ":9180",
 		LogLevel: "debug",
 		Mongo:    db.NewMongo(),
 	}

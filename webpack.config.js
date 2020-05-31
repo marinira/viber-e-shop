@@ -61,7 +61,7 @@ module.exports = {
         hot: true,
         inline: true,
         progress: true,
-        port: 9000,
+        port: 9180,
 
         proxy: {
             '/api': 'http://localhost:3000'
